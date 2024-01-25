@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html >
+    <head>
+      <title>Sign in form</title>
+      <link rel="stylesheet" href="login.css">
+      </head>
+    <body>
+      <br><br>
+      <form  class="sign" >
+         <h1>Sign In</h1>
+         <div>
+           <label>Email</label><br> 
+           <input type="email"required id="email" placeholder="Enter Email">
+        </div>
+        <div>
+           <label>Username</label><br> 
+           <input type="text" required id="username1" placeholder="Enter Username">
+        </div>
+        <div>
+           <label>Password</label><br>
+           <input type="password"required id="password1" placeholder="Enter Password">
+        </div>
+        <tr><td>
+         <button type="submit"class="enter" onclick="login1(event)">Enter</button>
+          <button type="reset">Cancel</button></td>
+         </tr>
+        <div>
+           <p>Click to <a class="lo">Login</a></p>
+        </div> 
+     </form>
+     
+     <form  class="sign">
+      <h1>Log In</h1>
+     <div>
+        <label>Username</label><br> 
+        <input type="text" required id="username2" placeholder="Enter Username">
+     </div>
+     <div>
+        <label>Password</label><br>
+        <input type="password"required id="password2" placeholder="Enter Password">
+     </div>
+     <tr><td>
+     <button type="submit" class="enter" onclick="login2(event)">Enter</button>
+      <button type="reset">Cancel</button></td>
+     </tr>
+     <div>
+        <p>Click to <a class="lo">sign in</a></p>
+     </div> 
+  </form>
+
+  <script>
+
+function login1(event) {
+   //event.preventDefault();
+   const form1 = {
+      Email: document.getElementById("Email").value,
+      usernmae: document.getElementById("username1").value,
+      password: document.getElementById("password1").value
+   }
+   const formData = JSON.parse(localStorage.getItem("formdata1")) || [];
+   formData.push(form1);
+   localStorage.setItem("formdata1", JSON.stringify(formData));
+}
+   
+function login2(event){
+  // event.preventDefault();
+   const form2 = {
+      Email: document.getElementById("Email").value,
+      username: document.getElementById("username1").value,
+      password: document.getElementById("password1").value
+   }
+   const formData = JSON.parse(localStorage.getItem("formdata2")) || [];
+   formData.push(form2);
+   localStorage.setItem("formdata2", JSON.stringify(formData));
+
+   const data1= localStorage.getItem('formData1');
+   const data2= localStorage.getItem('formData2');
+   const parsedata1 = JSON.parse(data1) || []
+   const parsedata2 = JSON.parse(data2) || []
+   parsedata2.forEach((obj2))
+   parsedata1.forEach((obj1)=>{
+      if(obj1.username == obj2.username && obj1.password==obj2.username)
+      {
+         alert("sucess");
+      }
+      else{
+         alert("not sucess");
+      }
+   })
+}
+
+
+  </script>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="style.css">
+    <title>health web</title>
+    <head>
+      
+        <style>
+            button{
+                 border-radius: 10%;
+                 margin-top: 2%;
+                margin-bottom: 2%;
+                margin-left: 2%;
+                margin-right: 2%;
+                border-color: transparent;
+                background-color: transparent;
+            }
+            h3{
+                font-size:medium;
+                font-family:'italic';
+                 color:oldlace;
+            }
+            img{
+                border-radius: 100%;
+                border-style:dashed;
+                border-color: oldlace;
+                border-width: 2px;
+            }
+            
+            .image{
+                background-image: url("health care.jpeg");
+                background-size:cover;
+            }
+        </style>
+    </head>
+    <body class="image">
+        <ol>
+    <tr><button class="img" >
+        <a href="loss.html"><img src="weight loss.jpg" title="weight loss tips" alt="image" width="130" height="130"></a><br>
+        <h3>weight loss tips</h3>
+    </button></tr>
+    <br>
+    <tr><button class="img" >
+       <a href="gain.html"><img src="weight gain.jpg"title="weight gain tips" alt="image" width="130" height="130"></a><br>
+       <h3> weight gain tips</h3>
+    </button></tr>
+    <br>
+    <tr><button class="img">
+       <a href="fitness.html"><img src="fitness.jpg"title="general fitness" alt="image" width="130" height="130"></a><br>
+       <h3> general fitness</h3>
+    </button></tr>
+    <br>
+    <tr><button class="img">
+        <a onclick="myFunction()"><img src="bmi.jpg"title="bmi calculator image" alt="image" width="130" height="130"></a><br>
+        <h3>BMI Calculator</h3>
+           </button>
+     </tr>
+        </ol>
+
+<script>
+function myFunction() {
+  let weight = prompt("Please enter your weight in KG");
+  let height = prompt("Please enter your height in CM");
+  var value = (weight / ((height / 100)*(height / 100)));
+  if (value <= 17.5 ) {
+    alert("Your Are Under Weight");
+  }
+  else if (value > 17.5 && value <= 24) {
+    alert("Your Weight Is Normal");
+  } 
+  else if(value > 24 && value <= 29)
+  {
+    alert("Your Are Over Weight");
+  }
+  else if(value>=30)
+  {
+    alert("Your Weight Is Obesity");
+  }
+}
+</script>
+    </body>
+</html>

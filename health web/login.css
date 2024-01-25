@@ -1,0 +1,48 @@
+body{
+    background-color:darkgray;
+    margin-left: 15cm;
+    margin-top: 5cm;
+    margin-right: 15cm;
+}
+h1{
+    text-align: center;
+}
+p{
+    margin-left: 10%;
+}
+.lo{
+    border: none;
+    background-color: transparent;
+    transform: rotate3d(1,-100, 1, 180deg);
+}
+.sign{
+    background-color:aqua;
+    border-radius: 10%;
+    border-color:floralwhite;
+    border-style:dashed;
+    text-align:left;
+}
+input{
+    margin-left: 10%;
+    margin-bottom:10px;
+    margin-top: 2px;
+    background-color: transparent;
+}
+label{
+margin-left: 1cm;
+font-size: larger;
+}
+.enter{
+    margin-left: 10%;
+}
+button{
+    border-radius: 10%;
+    margin-left: 5%;
+    width: 2.5cm;
+    height: 1.5cm;
+    border-color: transparent;
+    height: max-content;
+    font-style:serif;
+    font-size:large;
+}
+
