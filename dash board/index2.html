@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+   <style>
+    #icon{
+        width: 200px;
+        height: 200px;
+        padding: 30px;
+        border-radius: 100%;
+    }
+    #slidebar{
+    padding: 0px;
+    background-color: blueviolet;
+    width: 8cm;
+    border-radius: 1%;
+    text-align: center;
+    }
+    .but,.but1{
+        border: none;
+        background-color: transparent;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 40px;
+        padding-top: 40px;
+       color: rgb(192, 168, 202);
+       font-size:medium
+       
+    }
+    .but:hover,.but1:hover{
+        color:white;
+        cursor: pointer;
+    }
+    .but1{
+        padding-top: 150px;
+    }
+    input{
+        border-width: 0.5px;
+        text-align: right;
+        border-radius: 5%;
+        height: 1cm;
+        padding: 10px;
+        width: 10cm;
+        margin-left: 10cm;
+        margin-top: 0.5cm;
+        margin-bottom: 0.5cm;
+    }
+    #welcome{
+        margin-left: 2cm;
+        background-color: blueviolet;
+        color: aliceblue;
+        padding: 10px;
+        width: 50cm;
+        height: 6cm;
+        font-size: larger;
+    }
+    .pay{
+        margin: 10px;
+        padding: 10px;
+        width: 4cm;
+        height: 4cm;
+        border-radius: 5%;
+        border-style: solid;
+        border-color:transparent;
+        border-width: 3px;
+        font-size: larger;
+        margin-left: 3cm;
+    }
+    .pay:hover{
+        border-color: blueviolet;
+        cursor: pointer;
+    }
+    .b1{
+        background-color: rgb(210, 190, 229);
+        color: blueviolet;
+        border-radius: 5%;
+        width: 8cm;
+        height: 4cm;
+        padding: 10px;
+        align-items: center;
+        border-style: solid;
+        border-width: 1px;
+        border-color: blueviolet;
+        margin-left: 2cm;
+        margin-right: 2cm;
+    }
+    .view{
+        width: 80px;
+        height: 25px;
+        padding: 10px;
+        border: none;
+        border-radius: 30%;
+        background-color: blueviolet;
+        color: white;
+        margin-top: 0.5cm;
+        margin-left: 1cm;      
+    }
+    .view:hover{
+        cursor: pointer;
+    }
+    .see{
+        color: blueviolet;
+        font-size:medium;
+    }
+    .p1{
+        margin-left: 1cm;
+    }
+    .p2{
+        margin-left: 2cm;
+    }
+    .login{
+        height: 1cm;
+        width: 3cm;
+        font-size: medium;
+        padding: 10px;
+        background-color: transparent;
+        margin-left: 7cm;
+        border-width: 0.5px;
+    }
+    .login:hover{
+        background-color: blueviolet;
+        color: white;
+        cursor: pointer;
+    }
+   </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td id="slidebar" rowspan="6" colspan="10">
+      <Sidebar> 
+        <div >
+        <img src="icon.jpg" alt="image" id="icon"><br>
+        <button class="but">Dashboard</button><br>
+        <button class="but">Payment Info</button><br>
+        <button class="but">Registration</button><br>
+        <button class="but">Courses</button><br>
+        <button class="but">Drop Semester</button><br>
+        <button class="but">Result</button><br>
+        <button class="but">Notice</button><br>
+        <button class="but">Schedule</button><br>
+        <button class="but1">Logout</button><br>
+        </div>
+      </Sidebar>
+               </td>
+    <td >
+      <header>
+        <input type="search"placeholder="search" ><button class="login button">Login</button>
+      </header>
+     </td>
+             </tr>
+     <div>
+         <tr>
+        <td id="welcome" rowspan="1" colspan="10">
+            <h5>September 4, 2023</h5><br><br>
+            <h2>Welcome back, John!</h2><br>
+            <h4>Always stay updates in your student portal</h4>    
+     </tr>
+     </div>
+     <tr>
+        <td  colspan="3"rowspan="1">
+            <h1>Finanace</h1>
+        
+            <button class="pay">$10,000 <br> Total payable</button>
+        
+            <button class="pay">$5,000 <br> Total Paid</button>
+        
+            <button class="pay">$300 <br> Others</button>
+        </td>
+     </tr>
+     <tr>
+        <td colspan="3" rowspan="1">
+             <h1>Enrolled Courses</h1> 
+            <button class="b1">
+               <h2> Object oriented programming <p class="view">view</p></h2>
+            </button>
+        
+            <button class="b1">
+                <h2>function of database systems <p class="view">view</p></h2>
+            </button>
+        </td>
+     </tr>
+     <tr>
+        <td colspan="7"rowspan="5"> <h1>Daily notice</h1><br>
+            <h2 class="p1">Prelim payment due</h2>
+            <h3 class="p2">Sorem ipsum dolor sit amet,consectetur adipiscing elit. <p class="see">see more</p></h3><br>
+            <h2 class="p1">Exam schedule</h2>
+            <h3 class="p2">Noremmipsum dolor sit amet, consectetur adipiscing alit. <p class="see">see more</p></h3>
+        </td>
+     </tr>
+        </table>
+        <script src="index3.js"></script>
+    </body>
+</html>

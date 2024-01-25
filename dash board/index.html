@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+        .body{
+           background-color:blueviolet;
+           z-index: 1;
+        }
+      form{
+        background-color: white;
+        width: 9cm;
+        height: 10cm;
+        text-align: center;
+        padding: 10px;
+        margin-top: 4.8cm;
+        margin-left:15cm;
+      }
+      input{
+        width:7cm;
+        height: 1cm;
+        border-style:solid;
+        border-width:1px;
+        padding: 3px;
+      }
+      .login{
+        width:7cm;
+        height: 1cm;
+        background-color:rgb(104, 73, 133);
+        border: none;
+        border-radius: 3%;
+        color: white;
+        font-size: larger;
+      }
+      .login:hover,.link:hover{
+        cursor: pointer;
+      }
+      .f2{
+        display: none;
+      }
+      .link{
+        border: none;
+        background-color: transparent;
+        font-size: medium;
+        color: blueviolet;
+      }
+      
+    </style>
+    </head>
+    <body class="body">
+        <form class="f1" onsubmit="check(event)" action="index2.html">
+            <dh><h1>Login Form</h1></dh>
+            <input class="int" type="text" placeholder="Username" id="name1" required title="Enter your username"><br><br>
+            <input class="int" type="password" placeholder="password" id="password1" required title="Enter your password">
+            <h5><a href="#" >Forgot password?</a></h5>
+            <button class="login" type="submit">Login</button>
+            <h5>Switch to <button onclick="Signin(event)" class="link">Signup</button></h5>
+        </form>
+        <form class="f2">
+            <dh><h1>Signin Form</h1></dh>
+            <input class="int" type="email" placeholder="Email " id="email" required title="Enter your Email"><br><br>
+            <input class="int" type="text" placeholder="Username" id="name" required title="Enter your username"><br><br>
+            <input class="int" type="password" placeholder="password" id="password" required title="Enter your password"><br><br>
+            <button class="login" onclick="save(event)">Signin</button>
+            <h5>Switch to <button onclick="login(event)" class="link">Login</button></h5>
+        </form>
+    </body>
+    <script >
+      const f1=document.querySelector(".f1")
+const f2=document.querySelector(".f2")
+function login(event){
+ event.preventDefault();
+    f1.style.display="block";
+    f2.style.display="none";
+}
+function Signin(event){
+ event.preventDefault();
+    f2.style.display="block";
+    f1.style.display="none";
+}
+function save(event) {
+event.preventDefault();
+const form = {
+email: document.getElementById("email").value,
+name: document.getElementById("name").value,
+password: document.getElementById("password").value
+}
+
+let formData = JSON.parse(localStorage.getItem("formdata")) || [];
+formData.push(form);
+localStorage.setItem("formdata", JSON.stringify(formData));
+}
+function check(event){
+event.preventDefault();
+var name1= document.getElementById("name1").value
+var password1= document.getElementById("password1").value
+let originalname=0;
+let originalpassword=0;
+
+const data = localStorage.getItem('formdata');
+const parsedata = JSON.parse(data) || []
+parsedata.forEach((obj) => {
+originalname=obj.name;
+originalpassword=obj.password;
+})
+
+if((originalname === name1) && (originalpassword === password1))
+{
+console.log("your write");
+}
+}
+
+
+    </script>
+</html>
