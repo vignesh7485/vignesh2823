@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <title>Medium</title>
+    <style>
+        body{
+            background-color: rgb(52, 51, 51);
+            margin: 0px;
+            padding: 0px;
+            width:auto;
+            height: auto;
+        }
+        nav{
+            margin-left: 1cm;
+            margin: 8px;
+        }
+        .b1 {
+            border: none;
+            border-top-left-radius: 10%;
+            border-bottom-left-radius: 10%;
+            width: 2cm;
+            height: 1cm;
+            color: aliceblue;
+            cursor: pointer;
+            background-color: rgb(129, 128, 128);
+        }
+        .b1:hover,.b2:hover,.b3:hover,.b4:hover,.b6:hover{
+            background-color: aliceblue;
+            color: black;
+        }
+        .b2 {
+            border: none;
+            width: 2cm;
+            height: 1cm;
+            color: aliceblue;
+            cursor: pointer;
+            background-color: rgb(129, 128, 128);
+        }
+        .b3 {
+            border: none;
+            border-top-right-radius: 10%;
+            border-bottom-right-radius: 10%;
+            width: 2cm;
+            height: 1cm;
+            color: aliceblue;
+            cursor: pointer;
+            background-color: rgb(129, 128, 128);
+        }
+        .b4 {
+            border: none;
+            border-radius: 10%;
+            width: 2cm;
+            height: 1cm;
+            color: aliceblue;
+            cursor: pointer;
+            background-color: rgb(87, 85, 85);
+        }
+        .b5{
+            text-align:left;
+            height: 1.5cm;
+            font-size: larger;
+            background-color: rgb(4, 4, 82);
+            width: 80%;
+            color: aliceblue;
+        }
+        .html,.css,.js,.result{
+            margin-top:0.5cm;
+            margin-bottom:0.5cm;
+            padding: 5%;
+            text-align: center;
+            height:11.5cm;
+            background-color:orange;
+        }
+        .html{
+            display: none;
+        }
+        .css{
+            display: none;
+        }
+        .js{
+            display: none;
+        }
+        h1{
+            font-size:1cm;
+        }
+        .b6,.b7 {
+            
+            border: none;
+            border-radius: 10%;
+            width: 2cm;
+            height: 1cm;
+            color: aliceblue;
+            cursor: pointer;
+            background-color: rgb(87, 85, 85);
+        }
+        #b7{
+            margin-right: 28cm;
+        }
+        .top{
+            margin: 0.5cm;
+        }
+        .bottum{
+            margin: 0.5cm;
+        }
+    </style>
+    <body>
+    <nav>
+        <div class="top">
+        <button class="b1" onclick="html()">HTML</button>
+        <button class="b2" onclick="css()">CSS</button>
+        <button class="b3" onclick="js()">JS</button>
+        <button class="b4" onclick="result()">RESULT</button>
+        </div>
+
+        <div class="html">
+           <h1>html codes</h1>
+           <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+             Error magnam voluptate hic ab officia iste nam illum, <br>
+             earum rerum officiis quod rem voluptas tempore exercitationem,  <br> 
+             laboriosam eius nihil? Possimus, nemo. <br>
+             Fuga expedita esse, corrupti, eligendi reprehenderit consequatur <br>
+             temporibus similique laborum accusamus, voluptate necessitatibus  <br>
+             iusto provident atque corporis ipsam voluptates quos magnam vero.  <br>
+           </h2>
+        </div>
+
+        <div class="css">
+           <h1> .b5{</h1>
+         <h2 >  text-align:left;<br>
+                height: 1.5cm;<br>
+                font-size: larger;<br>
+                color: aliceblue;    }</h2>
+          <h1>  .html,.css,.js,.result{</h1>
+           <h2> margin-top:0.5cm;<br>
+                margin-bottom:0.5cm;<br>
+                padding: 5%;<br>
+                background-color:orange;    } </h2>
+        </div>
+
+        <div class="js">
+           <h1> function html(){</h1>
+           <h2> 
+                h.style.display="block";<br>
+                c.style.display="none";<br>
+                j.style.display="none";<br>
+                r.style.display="none";   }<br>
+             </h2>
+           <h1> function css() {</h1>
+            <h2>
+                h.style.display="none";<br>
+                c.style.display="block";<br>
+                j.style.display="none";<br>
+                r.style.display="none";   }<br>
+             </h2>
+        </div>
+
+        <div class="result">
+            <label for="b5" class="b5"></label>
+            <select name="b5" class="b5">
+            <option value="Pure CSS Select">Pure CSS Select</option>
+            <option >With wrapper</option>
+             <option >No Js!</option>
+            </select>
+            <h1>NO wrapper "modern" version <a href="car.jpg">here</a></h1>
+            </div>
+
+        <div class="bottum">
+        <button class="b6" id="b7">Resources</button>
+        <button class="b6" onclick="one()">1x</button>
+        <button class="b6" onclick="pointfive()">0.5x</button>
+        <button class="b6" onclick="pointtwofive()">0.25x</button>
+        <button class="b6" onclick="rerun()">Rerun</button>
+        </div>
+    </nav>
+    </body>
+    <script>
+var h=document.querySelector(".html")
+var c=document.querySelector(".css")
+var j=document.querySelector(".js")
+var r=document.querySelector(".result")
+ function html(){
+    h.style.display="block";
+    c.style.display="none";
+    j.style.display="none";
+    r.style.display="none";
+ }
+ function css(){
+    h.style.display="none";
+    c.style.display="block";
+    j.style.display="none";
+    r.style.display="none";
+ }
+ function js(){
+    h.style.display="none";
+    c.style.display="none";
+    j.style.display="block";
+    r.style.display="none";
+ }
+ function result(){
+    h.style.display="none";
+    c.style.display="none";
+    j.style.display="none";
+    r.style.display="block";
+ }
+ function one(){
+    r.style. width="60%";
+ }
+ function pointfive(){
+    r.style. width="40%";
+ }
+ function pointtwofive(){
+    r.style. width="20%";
+ }
+ function rerun(){
+    r.style. width="100%";
+ }
+    </script>
+</html>
